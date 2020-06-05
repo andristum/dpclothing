@@ -171,22 +171,22 @@ function ToggleClothing(which, extra)
 					PlayToggleEmote(Toggle.Emote, function() SetPedComponentVariation(Ped, Toggle.Drawable, v, Cur.Texture, 0) end) return true
 				end
 			else
-				if not LastEquipped[which] then
+				if not LastEquipped[Lang(which)] then
 					if k == Cur.Drawable then
-						PlayToggleEmote(Toggle.Emote, function() LastEquipped[which] = Cur SetPedComponentVariation(Ped, Toggle.Drawable, v, Cur.Texture, 0) end) return true
+						PlayToggleEmote(Toggle.Emote, function() LastEquipped[Lang(which)] = Cur SetPedComponentVariation(Ped, Toggle.Drawable, v, Cur.Texture, 0) end) return true
 					end
 				else
-					local Last = LastEquipped[which]
-					PlayToggleEmote(Toggle.Emote, function() SetPedComponentVariation(Ped, Toggle.Drawable, Last.Drawable, Last.Texture, 0) LastEquipped[which] = false end) return true
+					local Last = LastEquipped[Lang(which)]
+					PlayToggleEmote(Toggle.Emote, function() SetPedComponentVariation(Ped, Toggle.Drawable, Last.Drawable, Last.Texture, 0) LastEquipped[Lang(which)] = false end) return true
 				end
 			end
 		end
 		Notify(Lang("NoVariants")) return
 	else
-		if not LastEquipped[which] then
+		if not LastEquipped[Lang(which)] then
 			if Cur.Drawable ~= Table then 
 				PlayToggleEmote(Toggle.Emote, function()
-					LastEquipped[which] = Cur
+					LastEquipped[Lang(which)] = Cur
 					SetPedComponentVariation(Ped, Toggle.Drawable, Table, 0, 0)
 					if Toggle.Table.Extra then
 						local Extras = Toggle.Table.Extra
@@ -202,10 +202,10 @@ function ToggleClothing(which, extra)
 				return true
 			end
 		else
-			local Last = LastEquipped[which]
+			local Last = LastEquipped[Lang(which)]
 			PlayToggleEmote(Toggle.Emote, function()
 				SetPedComponentVariation(Ped, Toggle.Drawable, Last.Drawable, Last.Texture, 0)
-				LastEquipped[which] = false
+				LastEquipped[Lang(which)] = false
 				if Toggle.Table.Extra then
 					local Extras = Toggle.Table.Extra
 					for k,v in pairs(Extras) do
@@ -236,11 +236,11 @@ function ToggleProps(which)
 	}
 	if not Prop.Variants then
 		if Cur.Prop ~= -1 then -- If we currently are wearing this prop, remove it and save the one we were wearing into the LastEquipped table.
-			PlayToggleEmote(Prop.Emote.Off, function() LastEquipped[which] = Cur ClearPedProp(Ped, Prop.Prop) end) return true
+			PlayToggleEmote(Prop.Emote.Off, function() LastEquipped[Lang(which)] = Cur ClearPedProp(Ped, Prop.Prop) end) return true
 		else
-			local Last = LastEquipped[which] -- Detect that we have already taken our prop off, lets put it back on.
+			local Last = LastEquipped[Lang(which)] -- Detect that we have already taken our prop off, lets put it back on.
 			if Last then
-				PlayToggleEmote(Prop.Emote.On, function() SetPedPropIndex(Ped, Prop.Prop, Last.Prop, Last.Texture, true) end) LastEquipped[which] = false return true
+				PlayToggleEmote(Prop.Emote.On, function() SetPedPropIndex(Ped, Prop.Prop, Last.Prop, Last.Texture, true) end) LastEquipped[Lang(which)] = false return true
 			end
 		end
 		Notify(Lang("NothingToRemove")) return false
