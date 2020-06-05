@@ -18,12 +18,20 @@ local function Distance(x1, y1, x2, y2)
 end
 
 local function DisableControl()
-	DisableControlAction(1, 1, true)		-- Mouse Right/Left
-	DisableControlAction(1, 2, true)		-- Mouse Up/Down
-	DisableControlAction(1, 14, true)		-- Scroll Wheel
-	DisableControlAction(1, 15, true)		-- Scroll Wheel
-	DisableControlAction(1, 16, true)		-- Scroll Wheel
-	DisableControlAction(1, 17, true)		-- Scroll Wheel
+	DisableControlAction(1, 1, true)
+	DisableControlAction(1, 2, true)
+	DisableControlAction(1, 18, true)
+	DisableControlAction(1, 68, true)
+	DisableControlAction(1, 69, true)
+	DisableControlAction(1, 70, true)
+	DisableControlAction(1, 91, true)
+	DisableControlAction(1, 92, true)
+	DisableControlAction(1, 24, true)
+	DisableControlAction(1, 25, true)
+	DisableControlAction(1, 14, true)
+	DisableControlAction(1, 15, true)
+	DisableControlAction(1, 16, true)
+	DisableControlAction(1, 17, true)
 	DisablePlayerFiring(PlayerId(), true)	-- We wouldnt want the player punching by accident.
 	ShowCursorThisFrame()
 end
