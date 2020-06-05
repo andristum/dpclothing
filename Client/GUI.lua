@@ -161,7 +161,7 @@ local function DrawGUI()
 	local x, y, rx, ry = Config.GUI.Position.x, Config.GUI.Position.y, 0.1, 0.175
 	for k,v in pairs(Buttons) do
 		local Colour local Alpha
-		if LastEquipped[v.Text] then
+		if LastEquipped[FirstUpper(v.Sprite)] then
 			Alpha = 180 Colour = {r=0,g=100,b=210,a=220}
 		else 
 			Alpha = 255 Colour = {r=0,g=0,b=0,a=255}
@@ -191,7 +191,7 @@ local function DrawGUI()
 	end
 	for k,v in pairs(ExtraButtons) do
 		local Colour local Alpha
-		if LastEquipped[v.Text] then
+		if LastEquipped[FirstUpper(v.Sprite)] then
 			Alpha = 180 Colour = {r=0,g=100,b=210,a=220}
 		else 
 			Alpha = 255 Colour = {r=0,g=0,b=0,a=255}
