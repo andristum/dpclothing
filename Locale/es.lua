@@ -30,6 +30,8 @@ Locale.es = {
 	Visor2 = "Variación del sombrero.",
 	Watch = "Vigilar",
 	NoShirtOn = "No puedes hacer esto sin tu camisa.",
+	Reset = "Revertir",
+	Reset2 = "Volver todo a la normalidad",
 	-- Comandos
 	BAG = "bolsa",
 	BRACELET = "brazalete",
@@ -47,6 +49,7 @@ Locale.es = {
 	WATCH = "mira",
 	PANTS = "pantalones",
 	SHIRT = "camisa",
+	RESET = "revertir",
 }
 
 -- Generated with DeepL

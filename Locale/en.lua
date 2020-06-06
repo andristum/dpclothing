@@ -30,6 +30,8 @@ Locale.en = {
 	Visor2 = "Toggle hat variation.",
 	Watch = "Watch",
 	NoShirtOn = "You cannot do this without your shirt on.",
+	Reset = "Revert",
+	Reset2 = "Revert everything back to normal.",
 	-- Commands
 	BAG = "bag",
 	BRACELET = "bracelet",
@@ -47,4 +49,5 @@ Locale.en = {
 	WATCH = "watch",
 	PANTS = "pants",
 	SHIRT = "shirt",
+	RESET = "revertclothing",
 }

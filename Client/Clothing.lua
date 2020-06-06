@@ -149,6 +149,19 @@ local function PlayToggleEmote(e, cb)
 	cb()
 end
 
+function ResetClothing()
+	local Ped = PlayerPedId()
+	for k,v in pairs(LastEquipped) do
+		if v then
+			if v.Ped == Ped then
+				if v.Drawable then SetPedComponentVariation(Ped, v.ID, v.Drawable, v.Texture, 0)
+				elseif v.Prop then ClearPedProp(Ped, v.ID) SetPedPropIndex(Ped, v.ID, v.Prop, v.Texture, true) end
+			else print("Skipped "..k.." (Ped Changed)") end
+		end
+	end
+	LastEquipped = {}
+end
+
 function ToggleClothing(which, extra)
 	if Cooldown then return end
 	local Toggle = Drawables[which] if extra then Toggle = Extras[which] end
@@ -336,14 +349,6 @@ end
 
 AddEventHandler('onResourceStop', function(resource) -- Mostly for development, restart the resource and it will put all the clothes back on.
 	if resource == GetCurrentResourceName() then
-		local Ped = PlayerPedId()
-		for k,v in pairs(LastEquipped) do
-			if v then
-				if v.Ped == Ped then
-					if v.Drawable then SetPedComponentVariation(Ped, v.ID, v.Drawable, v.Texture, 0)
-					elseif v.Prop then ClearPedProp(Ped, v.ID) SetPedPropIndex(Ped, v.ID, v.Prop, v.Texture, true) end
-				else print("Skipped "..k.." (Ped Changed)") end
-			end
-		end
+		ResetClothing()
 	end
 end)

@@ -30,6 +30,8 @@ Locale.de = { --Translated by @Naifen-Phoxidas
 	Visor2 = "Hut Variante verändern.",
 	Watch = "Uhr",
 	NoShirtOn = "Sie können dies nicht ohne Ihr Hemd tun.",
+	Reset = "Revert",
+	Reset2 = "Alles wieder in den Normalzustand zurückversetzen",
 	-- Commands
 	BAG = "rucksack",
 	BRACELET = "armband",
@@ -47,4 +49,5 @@ Locale.de = { --Translated by @Naifen-Phoxidas
 	WATCH = "uhr",
 	PANTS = "hose",
 	SHIRT = "hemd",
+	RESET = "revertclothing",
 }
