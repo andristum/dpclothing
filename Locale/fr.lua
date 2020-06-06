@@ -50,6 +50,7 @@ Locale.fr = {
 	PANTS = "pantalons",
 	SHIRT = "chemise",
 	RESET = "retour",
+	BAGOFF = "bagoff",
 }
 
 -- Generated with DeepL

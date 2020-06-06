@@ -144,6 +144,13 @@ Config.Commands = {
 	}
 }
 
+local Bags = {				-- This is where bags/parachutes that should have the bag sprite, instead of the parachute sprite.
+	[40] = true,
+	[41] = true,
+	[44] = true,
+	[45] = true
+}
+
 Config.ExtraCommands = {
 	[Lang("PANTS")] = {
 		Func = function() ToggleClothing("Pants", true) end,
@@ -167,6 +174,34 @@ Config.ExtraCommands = {
 		Desc = Lang("Reset2"),
 		Name = Lang("Reset"),
 		OffsetX = 0.12,
+		OffsetY = 0.2,
+	},
+	[Lang("BAGOFF")] = {
+		Func = function() ToggleClothing("Bagoff", true) end,
+		Sprite = "bagoff",
+		SpriteFunc = function()
+			local Bag = GetPedDrawableVariation(PlayerPedId(), 5)
+			local BagOff = LastEquipped["Bagoff"]
+			if LastEquipped["Bagoff"] then
+				if Bags[BagOff.Drawable] then
+					return "bagoff"
+				else
+					return "paraoff"
+				end
+			end
+			if Bag ~= 0 then
+				if Bags[Bag] then
+					return "bagoff"
+				else
+					return "paraoff"
+				end
+			else
+				return false
+			end
+		end,
+		Desc = string.format(Lang("TakeOffOn"), string.lower(Lang("Bag"))),
+		Name = Lang("Bag"),
+		OffsetX = -0.12,
 		OffsetY = 0.2,
 	},
 }

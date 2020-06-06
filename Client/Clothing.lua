@@ -87,6 +87,11 @@ local Extras = {
 		Table = { Standalone = true, Male = 61, Female = 14 },
 		Emote = { Dict = "re@construction", Anim = "out_of_breath", Move = 51, Dur = 1300 }
 	},
+	["Bagoff"] = {
+		Drawable = 5,
+		Table = { Standalone = true, Male = 0, Female = 0 },
+		Emote = { Dict = "clothingtie", Anim = "try_tie_negative_a", Move = 51, Dur = 1200 }
+	},
 }
 
 local Props = {

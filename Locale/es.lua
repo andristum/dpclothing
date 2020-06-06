@@ -50,6 +50,7 @@ Locale.es = {
 	PANTS = "pantalones",
 	SHIRT = "camisa",
 	RESET = "revertir",
+	BAGOFF = "bagoff",
 }
 
 -- Generated with DeepL

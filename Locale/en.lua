@@ -50,4 +50,5 @@ Locale.en = {
 	PANTS = "pants",
 	SHIRT = "shirt",
 	RESET = "revertclothing",
+	BAGOFF = "bagoff",
 }

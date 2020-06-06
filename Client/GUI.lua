@@ -104,6 +104,7 @@ local function GenerateTheButtons() -- We generate the buttons here to save on a
 				OffsetX = v.OffsetX, OffsetY = v.OffsetY,
 				Size = { Circle = {x = DefaultCircle.x, y = DefaultCircle.y}, Sprite = {x = DefaultButton.x/1.35, y = DefaultButton.y/1.35}},
 				Sprite = v.Sprite,
+				SpriteFunc = v.SpriteFunc,
 				Text = v.Name,
 			}
 		end
@@ -138,9 +139,20 @@ local function HoveredButton()
 	end
 	for k,v in pairs(ExtraButtons) do
 		local Distance = Distance(Config.GUI.Position.x+v.OffsetX+0.005, Config.GUI.Position.y+v.OffsetY+0.025, x, y)
-		if Distance < 0.025 then
-			Text(Config.GUI.Position.x, Config.GUI.Position.y-0.10, 0.3, v.Text, false, false, true)
-			Text(Config.GUI.Position.x, Config.GUI.Position.y-0.08, 0.22, v.Desc, {210,210,210}, false, true, {x = 0.1, y = 0.2})
+		local ShouldDisplay = true
+		if v.SpriteFunc then
+			local SpriteVar = v.SpriteFunc()
+			if SpriteVar then
+				ShouldDisplay = true
+			else
+				ShouldDisplay = false
+			end
+		end
+		if ShouldDisplay then
+			if Distance < 0.025 then
+				Text(Config.GUI.Position.x, Config.GUI.Position.y-0.10, 0.3, v.Text, false, false, true)
+				Text(Config.GUI.Position.x, Config.GUI.Position.y-0.08, 0.22, v.Desc, {210,210,210}, false, true, {x = 0.1, y = 0.2})
+			end
 		end
 	end
 	local Distance = Distance(Config.GUI.Position.x+0.005, Config.GUI.Position.y+0.025, x, y)
@@ -196,18 +208,29 @@ local function DrawGUI()
 		else 
 			Alpha = 255 Colour = {r=0,g=0,b=0,a=255}
 		end
-		local Button = DrawButton({
-			Alpha = Alpha,
-			Colour = Colour,
-			Shadow = true,
-			Size = v.Size,
-			Sprite = v.Sprite,
-			Text = v.Text,
-			x = x + v.OffsetX,
-			y = y + v.OffsetY,
-		})
-		if Button and not Cooldown then
-			PushedButton(k, true) ExecuteCommand(v.Command)  
+		local sprite = v.Sprite
+		if v.SpriteFunc then
+			local SpriteVar = v.SpriteFunc()
+			if SpriteVar then
+				sprite = SpriteVar
+			else
+				sprite = false
+			end
+		end
+		if sprite then
+			local Button = DrawButton({
+				Alpha = Alpha,
+				Colour = Colour,
+				Shadow = true,
+				Size = v.Size,
+				Sprite = sprite,
+				Text = v.Text,
+				x = x + v.OffsetX,
+				y = y + v.OffsetY,
+			})
+			if Button and not Cooldown then
+				PushedButton(k, true) ExecuteCommand(v.Command)  
+			end
 		end
 	end
 	if Cooldown then Text(x, y+0.05, 0.28, Lang("PleaseWait"), false, false, true) end 		-- Cooldown indicator, if theres a cooldown we display a little text.
