@@ -210,10 +210,8 @@ function ToggleClothing(which, extra)
 						local Extras = Toggle.Table.Extra
 						for k,v in pairs(Extras) do
 							local ExtraCur = {Drawable = GetPedDrawableVariation(Ped, v.Drawable),  Texture = GetPedTextureVariation(Ped, v.Drawable), Id = v.Drawable}
-							if v.Drawable ~= ExtraCur.Drawable then
-								SetPedComponentVariation(Ped, v.Drawable, v.Id, v.Tex, 0)
-								LastEquipped[v.Name] = ExtraCur
-							end
+							SetPedComponentVariation(Ped, v.Drawable, v.Id, v.Tex, 0)
+							LastEquipped[v.Name] = ExtraCur
 						end
 					end
 				end)
