@@ -50,4 +50,5 @@ Locale.de = { --Translated by @Naifen-Phoxidas
 	PANTS = "hose",
 	SHIRT = "hemd",
 	RESET = "revertclothing",
+	BAGOFF = "einsacken",
 }

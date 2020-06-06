@@ -50,4 +50,5 @@ Locale.tr = {
 	PANTS = "pantolon", --pants
 	SHIRT = "shirt", --shirt this some because turkish translate = Tişört "ş,ö" maybe it can cause problems in commands.
 	RESET = "normaledondur", --revertclothing
+	BAGOFF = "bagoff",
 }
