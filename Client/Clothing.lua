@@ -158,10 +158,8 @@ function ResetClothing()
 	local Ped = PlayerPedId()
 	for k,v in pairs(LastEquipped) do
 		if v then
-			if v.Ped == Ped then
-				if v.Drawable then SetPedComponentVariation(Ped, v.ID, v.Drawable, v.Texture, 0)
-				elseif v.Prop then ClearPedProp(Ped, v.ID) SetPedPropIndex(Ped, v.ID, v.Prop, v.Texture, true) end
-			else print("Skipped "..k.." (Ped Changed)") end
+			if v.Drawable then SetPedComponentVariation(Ped, v.Id, v.Drawable, v.Texture, 0)
+			elseif v.Prop then ClearPedProp(Ped, v.Id) SetPedPropIndex(Ped, v.Id, v.Prop, v.Texture, true) end
 		end
 	end
 	LastEquipped = {}
@@ -173,7 +171,7 @@ function ToggleClothing(which, extra)
 	local Ped = PlayerPedId()
 	local Cur = { -- Lets check what we are currently wearing.
 		Drawable = GetPedDrawableVariation(Ped, Toggle.Drawable), 
-		ID = Toggle.Drawable,
+		Id = Toggle.Drawable,
 		Ped = Ped,
 		Texture = GetPedTextureVariation(Ped, Toggle.Drawable),
 	}
@@ -245,7 +243,7 @@ function ToggleProps(which)
 	local Ped = PlayerPedId()
 	local Gender = IsMpPed(Ped)
 	local Cur = { -- Lets get out currently equipped prop.
-		ID = Prop.Prop,
+		Id = Prop.Prop,
 		Ped = Ped,
 		Prop = GetPedPropIndex(Ped, Prop.Prop), 
 		Texture = GetPedPropTextureIndex(Ped, Prop.Prop),
