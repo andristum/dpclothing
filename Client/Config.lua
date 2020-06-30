@@ -13,6 +13,7 @@ Config = {
 		TextOutline = true,
 		TextFont = 0,					-- Change font, useful for other languages.
 		TextSize = 0.21,				-- Change the text size below buttons here, useful for other languages.
+		Toggle = false,					-- Change the keybind from toggling the window open, or just holding it to open it.
 	}
 }
 
@@ -169,12 +170,22 @@ Config.ExtraCommands = {
 		OffsetY = 0.0,
 	},
 	[Lang("RESET")] = {
-		Func = function() if not ResetClothing() then Notify(Lang("AlreadyWearing")) end end,
+		Func = function() if not ResetClothing(true) then Notify(Lang("AlreadyWearing")) end end,
 		Sprite = "reset",
 		Desc = Lang("Reset2"),
 		Name = Lang("Reset"),
 		OffsetX = 0.12,
 		OffsetY = 0.2,
+		Rotate = true
+	},
+	["clothingexit"] = {
+		Func = function() MenuOpened = false end,
+		Sprite = "exit",
+		Desc = "",
+		Name = Lang("Exit"),
+		OffsetX = 0.12,
+		OffsetY = -0.2,
+		Enabled = Config.GUI.Toggle
 	},
 	[Lang("BAGOFF")] = {
 		Func = function() ToggleClothing("Bagoff", true) end,

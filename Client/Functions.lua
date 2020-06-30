@@ -11,6 +11,7 @@ Keys = { -- Who doesnt love a big old table of keys.
 }
 
 function log(l) -- Just a simple logging thing, to easily log all kinds of stuff.
+	if l == nil then print("nil") return end
 	if not Config.Debug then return end
 	if type(l) == "table" then print(json.encode(l)) elseif type(l) == "boolean" then print(l) else print(l.." | "..type(l)) end
 end
@@ -126,5 +127,27 @@ end)
 RegisterNetEvent('dpc:ResetClothing')
 AddEventHandler('dpc:ResetClothing', function()
 	LastEquipped = {}
+end)
+
+--[[
+		[dpc:ToggleMenu]
+		Toggle the clothing menu off/on
+]]--
+
+RegisterNetEvent('dpc:ToggleMenu')
+AddEventHandler('dpc:ToggleMenu', function()
+	MenuOpened = not MenuOpened
+	if MenuOpened then SoundPlay("Open") SetCursorLocation(Config.GUI.Position.x, Config.GUI.Position.y) else SoundPlay("Close") end
+end)
+
+--[[
+		[dpc:Menu]
+		Changes status of the clothing menu.
+]]--
+
+RegisterNetEvent('dpc:Menu')
+AddEventHandler('dpc:Menu', function(status)
+	MenuOpened = status
+	if MenuOpened then SoundPlay("Open") else SoundPlay("Close") end
 end)
 

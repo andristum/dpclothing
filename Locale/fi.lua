@@ -32,6 +32,7 @@ Locale.fi = {
 	NoShirtOn = "Et voi tehdä tätä ilman paitaa",
 	Reset = "Palauta",
 	Reset2 = "Palauta kaikki takaisin",
+	Exit = "Lopettaa",
 	-- Commands
 	BAG = "laukku",
 	BRACELET = "rannekoru",

@@ -32,6 +32,7 @@ Locale.fr = {
 	NoShirtOn = "Vous ne pouvez pas le faire sans votre chemise.",
 	Reset = "Retour",
 	Reset2 = "Tout revenir à la normale.",
+	Exit = "Conclure",
 	-- Commandes
 	BAG = "sac",
 	BRACELET = "bracelet",

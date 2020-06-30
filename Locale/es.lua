@@ -32,6 +32,7 @@ Locale.es = {
 	NoShirtOn = "No puedes hacer esto sin tu camisa.",
 	Reset = "Revertir",
 	Reset2 = "Volver todo a la normalidad",
+	Exit = "Cerca",
 	-- Comandos
 	BAG = "bolsa",
 	BRACELET = "brazalete",

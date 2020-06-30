@@ -28,44 +28,44 @@ local Drawables = {
 	["Top"] = {
 		Drawable = 11,
 		Table = Variations.Jackets,
-		Emote = { Dict = "missmic4", Anim = "michael_tux_fidget", Move = 51, Dur = 1500 }
+		Emote = {Dict = "missmic4", Anim = "michael_tux_fidget", Move = 51, Dur = 1500}
 	},
 	["Gloves"] = {
 		Drawable = 3,
 		Table = Variations.Gloves,
 		Remember = true,
-		Emote = { Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200 }
+		Emote = {Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200}
 	},
 	["Shoes"] = {
 		Drawable = 6,
-		Table = { Standalone = true, Male = 34, Female = 35 },
-		Emote = { Dict = "random@domestic", Anim = "pickup_low", Move = 0, Dur = 1200 }
+		Table = {Standalone = true, Male = 34, Female = 35},
+		Emote = {Dict = "random@domestic", Anim = "pickup_low", Move = 0, Dur = 1200}
 	},
 	["Neck"] = {
 		Drawable = 7,
-		Table = { Standalone = true, Male = 0, Female = 0 },
-		Emote = { Dict = "clothingtie", Anim = "try_tie_positive_a", Move = 51, Dur = 2100 }
+		Table = {Standalone = true, Male = 0, Female = 0 },
+		Emote = {Dict = "clothingtie", Anim = "try_tie_positive_a", Move = 51, Dur = 2100}
 	},
 	["Vest"] = {
 		Drawable = 9,
-		Table = { Standalone = true, Male = 0, Female = 0 },
-		Emote = { Dict = "clothingtie", Anim = "try_tie_negative_a", Move = 51, Dur = 1200 }
+		Table = {Standalone = true, Male = 0, Female = 0 },
+		Emote = {Dict = "clothingtie", Anim = "try_tie_negative_a", Move = 51, Dur = 1200}
 	},
 	["Bag"] = {
 		Drawable = 5,
 		Table = Variations.Bags,
-		Emote = { Dict = "anim@heists@ornate_bank@grab_cash", Anim = "intro", Move = 51, Dur = 1600 }
+		Emote = {Dict = "anim@heists@ornate_bank@grab_cash", Anim = "intro", Move = 51, Dur = 1600}
 	},
 	["Mask"] = {
 		Drawable = 1,
-		Table = { Standalone = true, Male = 0, Female = 0 },
-		Emote = { Dict = "mp_masks@standard_car@ds@", Anim = "put_on_mask", Move = 51, Dur = 800 }
+		Table = {Standalone = true, Male = 0, Female = 0 },
+		Emote = {Dict = "mp_masks@standard_car@ds@", Anim = "put_on_mask", Move = 51, Dur = 800}
 	},
 	["Hair"] = {
 		Drawable = 2,
 		Table = Variations.Hair,
 		Remember = true,
-		Emote = { Dict = "clothingtie", Anim = "check_out_a", Move = 51, Dur = 2000 }
+		Emote = {Dict = "clothingtie", Anim = "check_out_a", Move = 51, Dur = 2000}
 	},
 }
 
@@ -75,22 +75,22 @@ local Extras = {
 		Table = {
 			Standalone = true, Male = 252, Female = 74,
 			Extra = { 
-						{ Drawable = 8, Id = 15, Tex = 0, Name = "Extra Undershirt"},
-			 			{ Drawable = 3, Id = 15, Tex = 0, Name = "Extra Gloves"},
-			 			{ Drawable = 10, Id = 0, Tex = 0, Name = "Extra Decals"},
+						{Drawable = 8, Id = 15, Tex = 0, Name = "Extra Undershirt"},
+			 			{Drawable = 3, Id = 15, Tex = 0, Name = "Extra Gloves"},
+			 			{Drawable = 10, Id = 0, Tex = 0, Name = "Extra Decals"},
 			  		}
 			},
-		Emote = { Dict = "clothingtie", Anim = "try_tie_negative_a", Move = 51, Dur = 1200 }
+		Emote = {Dict = "clothingtie", Anim = "try_tie_negative_a", Move = 51, Dur = 1200}
 	},
 	["Pants"] = {
 		Drawable = 4,
-		Table = { Standalone = true, Male = 61, Female = 14 },
-		Emote = { Dict = "re@construction", Anim = "out_of_breath", Move = 51, Dur = 1300 }
+		Table = {Standalone = true, Male = 61, Female = 14},
+		Emote = {Dict = "re@construction", Anim = "out_of_breath", Move = 51, Dur = 1300}
 	},
 	["Bagoff"] = {
 		Drawable = 5,
-		Table = { Standalone = true, Male = 0, Female = 0 },
-		Emote = { Dict = "clothingtie", Anim = "try_tie_negative_a", Move = 51, Dur = 1200 }
+		Table = {Standalone = true, Male = 0, Female = 0},
+		Emote = {Dict = "clothingtie", Anim = "try_tie_negative_a", Move = 51, Dur = 1200}
 	},
 }
 
@@ -99,43 +99,43 @@ local Props = {
 		Prop = 0,
 		Variants = Variations.Visor,
 		Emote = {
-			On = { Dict = "mp_masks@standard_car@ds@", Anim = "put_on_mask", Move = 51, Dur = 600 },
-			Off = { Dict = "missheist_agency2ahelmet", Anim = "take_off_helmet_stand", Move = 51, Dur = 1200 }
+			On = {Dict = "mp_masks@standard_car@ds@", Anim = "put_on_mask", Move = 51, Dur = 600},
+			Off = {Dict = "missheist_agency2ahelmet", Anim = "take_off_helmet_stand", Move = 51, Dur = 1200}
 		}
 	},
 	["Hat"] = {
 		Prop = 0,
 		Emote = {
-			On = { Dict = "mp_masks@standard_car@ds@", Anim = "put_on_mask", Move = 51, Dur = 600 },
-			Off = { Dict = "missheist_agency2ahelmet", Anim = "take_off_helmet_stand", Move = 51, Dur = 1200 }
+			On = {Dict = "mp_masks@standard_car@ds@", Anim = "put_on_mask", Move = 51, Dur = 600},
+			Off = {Dict = "missheist_agency2ahelmet", Anim = "take_off_helmet_stand", Move = 51, Dur = 1200}
 		}
 	},
 	["Glasses"] = {
 		Prop = 1,
 		Emote = {
-			On = { Dict = "clothingspecs", Anim = "take_off", Move = 51, Dur = 1400 },
-			Off = { Dict = "clothingspecs", Anim = "take_off", Move = 51, Dur = 1400 }
+			On = {Dict = "clothingspecs", Anim = "take_off", Move = 51, Dur = 1400},
+			Off = {Dict = "clothingspecs", Anim = "take_off", Move = 51, Dur = 1400}
 		}
 	},
 	["Ear"] = {
 		Prop = 2,
 		Emote = {
-			On = { Dict = "mp_cp_stolen_tut", Anim = "b_think", Move = 51, Dur = 900 },
-			Off = { Dict = "mp_cp_stolen_tut", Anim = "b_think", Move = 51, Dur = 900 }
+			On = {Dict = "mp_cp_stolen_tut", Anim = "b_think", Move = 51, Dur = 900},
+			Off = {Dict = "mp_cp_stolen_tut", Anim = "b_think", Move = 51, Dur = 900}
 		}
 	},
 	["Watch"] = {
 		Prop = 6,
 		Emote = {
-			On = { Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200 },
-			Off = { Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200 }
+			On = {Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200},
+			Off = {Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200}
 		}
 	},
 	["Bracelet"] = {
 		Prop = 7,
 		Emote = {
-			On = { Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200 },
-			Off = { Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200 }
+			On = {Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200},
+			Off = {Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200}
 		}
 	},
 }
@@ -154,8 +154,10 @@ local function PlayToggleEmote(e, cb)
 	cb()
 end
 
-function ResetClothing()
+function ResetClothing(anim)
 	local Ped = PlayerPedId()
+	local e = Drawables.Top.Emote
+	if anim then TaskPlayAnim(Ped, e.Dict, e.Anim, 3.0, 3.0, 3000, e.Move, 0, false, false, false) end
 	for k,v in pairs(LastEquipped) do
 		if v then
 			if v.Drawable then SetPedComponentVariation(Ped, v.Id, v.Drawable, v.Texture, 0)

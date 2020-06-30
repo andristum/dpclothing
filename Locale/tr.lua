@@ -32,6 +32,7 @@ Locale.tr = {
 	NoShirtOn = "Gömleğin olmadan bunu yapamazsın.",
 	Reset = "Geri Döndür", --Revert
 	Reset2 = "Her şeyi normale döndür.",
+	Exit = "Çıkmak",
 	-- Commands
 	BAG = "canta", --default -bag
 	BRACELET = "bilezik", --default bracelet

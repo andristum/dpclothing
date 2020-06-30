@@ -32,6 +32,7 @@ Locale.en = {
 	NoShirtOn = "You cannot do this without your shirt on.",
 	Reset = "Revert",
 	Reset2 = "Revert everything back to normal.",
+	Exit = "Close",
 	-- Commands
 	BAG = "bag",
 	BRACELET = "bracelet",

@@ -32,6 +32,7 @@ Locale.de = { --Translated by @Naifen-Phoxidas
 	NoShirtOn = "Sie können dies nicht ohne Ihr Hemd tun.",
 	Reset = "Zurücksetzen",
 	Reset2 = "Alles wieder in den Normalzustand zurückversetzen",
+	Exit = "Schließen",
 	-- Commands
 	BAG = "rucksack",
 	BRACELET = "armband",
