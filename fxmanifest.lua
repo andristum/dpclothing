@@ -1,8 +1,8 @@
 fx_version 'bodacious'
 game 'gta5'
-author 'dullpear'
+author 'dullpear (Forked by Collaze)'
 version '1.0.3'
-description 'dpClothing+'
+description 'dpClothing++'
 
 client_scripts {
 	'Client/Functions.lua', 		-- Global Functions / Events / Debug and Locale start.
